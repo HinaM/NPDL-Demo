@@ -1,0 +1,22 @@
+*{
+    position: relative;
+}
+.container-fluid{
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container-fluid .row .col-2{
+    background-color: #2e3243;
+    height: 100vh;
+}
+
+.container-fluid .row .col-2 .sel{
+    cursor: pointer;
+}
+.container-fluid .row .col-2 .sel.sel1{
+    color: #7984ac;
+    background-color: aqua;
+}
+.container-fluid .row .col-2 .list{
+    border-top: #4554a1 solid;
+}

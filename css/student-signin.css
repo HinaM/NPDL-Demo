@@ -68,7 +68,8 @@ form{
     width: 100%;
 }
 form .form-control:focus,
-form .form-select:focus{
+form .form-select:focus,
+form .form-check-input:focus{
     box-shadow: none;
 }
 form .btn-primary{
