@@ -1,0 +1,68 @@
+*{
+    position: relative;
+}
+body{
+    background-color: #f5f5f5 !important;
+}
+.circle{
+    background-color: #d9d9d9;
+    border-radius: 100%;
+    position: absolute;
+}
+.circle.circle1{
+    width: 300px;
+    height: 300px;
+    top: -80px;
+    left: -100px;
+}
+.circle.circle2{
+    width: 50px;
+    height: 50px;
+    top: 30px;
+    right: 150px;
+}
+.circle.circle3{
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    right: -70px;
+}
+.circle.circle4{
+    width: 25px;
+    height: 25px;
+    bottom: 70px;
+    left: 300px;
+}
+.circle.circle5{
+    width: 120px;
+    height: 120px;
+    bottom: -10px;
+    left: -50px;
+}
+.container-fluid{
+    height: fit-content;
+    overflow: hidden;
+}
+.container-fluid .row{
+    height: fit-content;
+}
+.container-fluid .row .col-4{
+    height: fit-content;
+}
+form{
+    width: 100%;
+}
+form .form-control:focus,
+form .form-select:focus{
+    box-shadow: none;
+}
+form .btn-primary{
+    width: 100%;
+    background-color: #3d5ac1 !important;
+    border: #3d5ac1 solid;
+}
+.btn-secondary{
+    width: 100%;
+    border: #8ac4ff solid !important;
+    background-color: #8ac4ff !important;
+}
