@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPDL 6CS進程施測站</title>
+    <link rel="stylesheet" href="./css/survey-filled.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9d0690b173.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center justify-content-between">
+            <div class="col-2 px-0 left-side position-fixed">
+                <h6 class="fw-bold my-4 text-light px-3">NPDL 6CS 進程施測站</h6>
+                <div class="row pb-4 px-3">
+                    <div class="col-3">
+                        <img class="rounded-circle" src="./img/profile-icon.svg" alt="">
+                    </div>
+                    <div class="col-9 d-flex justify-content-center flex-column">
+                        <p class="text-light m-0" style="font-size : 0.9rem">臺北市立內湖高級中學</p>
+                        <h6 class="fw-bold text-light m-0">王大明&nbsp;&nbsp;老師</h6>
+                    </div>
+                </div>
+
+                <div class="list">
+                    <h6 class="sel sel1 my-3 py-3 fw-bold ps-4 ">問卷一覽</h6>
+                    <a href="./student-info.html"><h6 class="sel  my-3 py-3 fw-bold ps-4">個人資料設定</h6></a>
+                </div>
+
+                <div class="row d-flex  justify-content-center dwn-btn">
+                    <div class="col-6 p-0 d-flex justify-content-center">
+                        <button type="button" class="btn btn-secondary">登出</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-10 px-4 right-side">
+
+                <div class="title border-bottom border-secondary-subtle pb-3  d-flex align-items-center justify-content-between mt-4">
+                    <a href="./teacher-all-survey.html"><h4 class="m-0"><i class="fa-solid fa-chevron-left"></i>&nbsp;返回問卷一覽</h4></a>
+                </div>
+                <div class="mt-3 d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0">問卷基本資訊</h4>
+                    <button type="button" class="btn btn-danger">刪除問卷</button>
+                </div>
+                <div class="border-bottom border-secondary-subtle pb-2">
+                    <div class="row mt-1 pb-3">
+                        <div class="col-6">
+                            <h5 class="fw-bold mb-2">問卷名稱</h5>
+                            <input class="form-control" type="text" placeholder="測驗測驗測驗測驗測驗" disabled>
+                        </div>
+                        <div class="col-6">
+                            <h5 class="fw-bold mb-2">課程名稱</h5>
+                            <input class="form-control" type="text" placeholder="國文" disabled>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="border-bottom border-secondary-subtle pb-2 mt-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h5 class="fw-bold mb-0">問卷所有人</h5>
+                        <button type="button" class="btn btn-primary">新增教師</button>
+                    </div>
+                    
+                    <table class="table table-striped mt-1">
+                        <thead>
+                          <tr>
+                            <th class="table-info" scope="col" style="width: 46%;">教師姓名</th>
+                            <th class="table-info" scope="col" style="width: 46%;">教師帳號</th>
+                            <th class="table-info" scope="col" style="width: 8%;"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>王大明</td>
+                            <td>1234567@xxx.edu.tw</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>王中明</td>
+                            <td>1234567@xxx.edu.tw</td>
+                            <td><i class="fa-solid fa-trash text-danger" style="cursor: pointer;"></i></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <div class="border-bottom border-secondary-subtle pb-2 mt-3"">
+                    <div class="mb-2 d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <h5 class="fw-bold mb-0 me-3" data-bs-toggle="collapse" href="#previous-measurement" role="button" aria-expanded="false" onclick="previousmeasurementIconClick();">前測測驗狀況 <i class="fa-solid fa-chevron-down" id="previousmeasurementIcon"></i></h5>
+                            <button type="button" class="btn btn-primary">匯出問卷結果</button>
+                        </div>
+                        <p class=" mb-0 fs-6 text-secondary">hint：點擊問卷名稱即可查看問卷填答情形！</p>
+                        <button type="button" class="btn btn-dark">封存問卷</button>
+                    </div>
+                    <div class="collapse show" id="previous-measurement">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th class="table-info" scope="col" style="width: 23%;">邀請碼</th>
+                                <th class="table-info" scope="col" style="width: 23%;">素養類型</th>
+                                <th class="table-info" scope="col" style="width: 23%;">年級班級</th>
+                                <th class="table-info" scope="col" style="width: 23%;">創建時間</th>
+                                <th class="table-info" scope="col" style="width: 8%;">狀態</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>ABC1234567</td>
+                                <td>CH、CZ、CO</td>
+                                <td>一年五班</td>
+                                <td>2023/12/31</td>
+                                <td><i class="fa-solid fa-circle-check text-success"></i></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        <table class="table table-striped mb-3">
+                            <thead>
+                              <tr>
+                                <th class="table-info" scope="col" style="width: 12%;">學生姓名</th>
+                                <th class="table-info" scope="col" style="width: 10%;">座號</th>
+                                <th class="table-info" scope="col" style="width: 10%;" data-bs-toggle="tooltip" title="品格向度1">CH1</th>
+                                <th class="table-info" scope="col" style="width: 10%;" data-bs-toggle="tooltip" title="品格向度2">CH2</th>
+                                <th class="table-info" scope="col" style="width: 10%;" data-bs-toggle="tooltip" title="公民素養1">CZ1</th>
+                                <th class="table-info" scope="col" style="width: 10%;" data-bs-toggle="tooltip" title="公民素養4">CZ4</th>
+                                <th class="table-info" scope="col" style="width: 10%;" data-bs-toggle="tooltip" title="協作1">CO1</th>
+                                <th class="table-info" scope="col" style="width: 10%;" data-bs-toggle="tooltip" title="協作5">CO5</th>
+                                <th class="table-info" scope="col" style="width: 18%;">測驗時間</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>王小明</td>
+                                <td>99</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>2023/12/31 23:59:59</td>
+                              </tr>
+                              <tr>
+                                <td>王小明</td>
+                                <td>99</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>2023/12/31 23:59:59</td>
+                              </tr>
+                              <tr>
+                                <td>王小明</td>
+                                <td>99</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>2023/12/31 23:59:59</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+                
+                <div class="border-bottom border-secondary-subtle pb-2 mt-3 mb-3">
+                    <div class="mb-2 d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <h5 class="fw-bold mb-2 me-3" data-bs-toggle="collapse" href="#aftertest" role="button" aria-expanded="false" onclick="aftertestIconClick();">後測測驗狀況 <i class="fa-solid fa-chevron-down" id="aftertestIcon"></i></h5>
+                            <button type="button" class="btn btn-primary">匯出問卷結果</button>
+                        </div>
+                        <p class=" mb-0 fs-6 text-secondary">hint：點擊問卷名稱即可查看問卷填答情形！</p>
+                        <button type="button" class="btn btn-dark">封存問卷</button>
+                    </div>
+                    <div class="collapse show" id="aftertest">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th class="table-info" scope="col" style="width: 23%;">邀請碼</th>
+                                <th class="table-info" scope="col" style="width: 23%;">素養類型</th>
+                                <th class="table-info" scope="col" style="width: 23%;">年級班級</th>
+                                <th class="table-info" scope="col" style="width: 23%;">創建時間</th>
+                                <th class="table-info" scope="col" style="width: 8%;">狀態</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>ABC1234567</td>
+                                <td>CH、CZ、CO</td>
+                                <td>一年五班</td>
+                                <td>2023/12/31</td>
+                                <td><i class="fa-solid fa-circle-check text-success"></i></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        <table class="table table-striped mb-3">
+                            <thead>
+                              <tr>
+                                <th class="table-info" scope="col" style="width: 12%;">學生姓名</th>
+                                <th class="table-info" scope="col" style="width: 10%;">座號</th>
+                                <th class="table-info" scope="col" style="width: 10%;" data-bs-toggle="tooltip" title="品格向度1">CH1</th>
+                                <th class="table-info" scope="col" style="width: 10%;" data-bs-toggle="tooltip" title="品格向度2">CH2</th>
+                                <th class="table-info" scope="col" style="width: 10%;" data-bs-toggle="tooltip" title="公民素養1">CZ1</th>
+                                <th class="table-info" scope="col" style="width: 10%;" data-bs-toggle="tooltip" title="公民素養4">CZ4</th>
+                                <th class="table-info" scope="col" style="width: 10%;" data-bs-toggle="tooltip" title="協作1">CO1</th>
+                                <th class="table-info" scope="col" style="width: 10%;" data-bs-toggle="tooltip" title="協作5">CO5</th>
+                                <th class="table-info" scope="col" style="width: 18%;">測驗時間</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>王小明</td>
+                                <td>99</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>2023/12/31 23:59:59</td>
+                              </tr>
+                              <tr>
+                                <td>王小明</td>
+                                <td>99</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>2023/12/31 23:59:59</td>
+                              </tr>
+                              <tr>
+                                <td>王小明</td>
+                                <td>99</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>2023/12/31 23:59:59</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+    var previousmeasurementIcon = document.getElementById("previousmeasurementIcon");
+    function previousmeasurementIconClick(){
+        if (previousmeasurementIcon.className == "fa-solid fa-chevron-down"){
+            previousmeasurementIcon.className = "fa-solid fa-chevron-up";
+        }else{
+            previousmeasurementIcon.className = "fa-solid fa-chevron-down";
+        }
+    }
+
+    var aftertestIcon = document.getElementById("aftertestIcon");
+    function aftertestIconClick(){
+        if (aftertestIcon.className == "fa-solid fa-chevron-down"){
+            aftertestIcon.className = "fa-solid fa-chevron-up";
+        }else{
+            aftertestIcon.className = "fa-solid fa-chevron-down";
+        }
+    }
+    </script>
+</html>

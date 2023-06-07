@@ -9,7 +9,9 @@
     background-color: #2e3243;
     height: 100vh;
 }
-
+.container-fluid .row .right-side{
+    margin-left: auto;
+}
 .container-fluid .row .col-2 .sel{
     cursor: pointer;
     color: #7984ac;
@@ -59,4 +61,27 @@
     position: absolute;
     bottom: 5%;
     width: 100%;
+}
+.btn.btn-outline-primary{
+    color: #3d5ac1 !important;
+    border: 1px #3d5ac1 solid !important;
+    font-weight: 700;
+
+}
+.btn-check:checked+.btn{
+    background-color: #3d5ac1 !important;
+    color: #fff !important;
+}
+table .table-info{
+    background-color: #d3e3ee !important;
+}
+table a{
+    color: inherit;
+}
+table .test-link{
+    background-color: #3d5ac1;
+    color: #fff;
+    padding: 3px;
+    border-radius: 2px;
+    text-decoration: none;
 }
