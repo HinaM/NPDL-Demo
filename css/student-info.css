@@ -60,3 +60,6 @@
     bottom: 5%;
     width: 100%;
 }
+.modal .text-primary{
+    color: #3d5ac1 !important;
+}
